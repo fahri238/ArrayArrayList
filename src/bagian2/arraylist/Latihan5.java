@@ -4,20 +4,24 @@ import java.util.ArrayList;
 
 public class Latihan5 {
     public static void main(String[] args) {
-        ArrayList<Integer> nilai = new ArrayList<>();
-        
-        nilai.add(80);
-        nilai.add(75);
-        nilai.add(90);
-        
-        int total = 0;
-        for (int n : nilai) { 
-        total += n;
-    }
-        
-        double rata = (double) total / nilai.size();
-        System.out.println("Data : " + nilai);
-        System.out.println("Total : " + total);
-        System.out.println("Rata-rata : " + rata);
+
+        ArrayList<Integer> angka = new ArrayList<>();
+
+        angka.add(15);
+        angka.add(30);
+        angka.add(8);
+        angka.add(45);
+        angka.add(20);
+
+        int terbesar = angka.get(0);
+
+        for (int a : angka) {
+            if (a > terbesar) {
+                terbesar = a;
+            }
+        }
+
+        System.out.println("Data : " + angka);
+        System.out.println("Nilai terbesar : " + terbesar);
     }
 }

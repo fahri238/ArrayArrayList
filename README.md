@@ -2,13 +2,14 @@
 
 ## Deskripsi
 
-Repository ini berisi kumpulan latihan dan tugas mandiri pada mata kuliah Pemrograman Berorientasi Objek (PBO) menggunakan bahasa Java.
+Repository ini berisi kumpulan latihan dan tugas pada mata kuliah Pemrograman Berorientasi Objek (PBO) menggunakan bahasa Java.
 
 Materi yang dikerjakan meliputi:
 
 * Array
 * ArrayList
 * Multi-Class dan Object-Oriented Programming (OOP)
+* Studi Kasus Pengelolaan Nilai Mahasiswa
 
 ---
 
@@ -16,24 +17,29 @@ Materi yang dikerjakan meliputi:
 
 ```text
 src/
-└── bagian1/
-    └── array/
-        ├── Latihan1.java
-        ├── Latihan2.java
-        └── LatihanMandiri3.java
-
-└── bagian2/
-    └── arraylist/
-        ├── Latihan3.java
-        ├── Latihan4.java
-        ├── Latihan5.java
-        └── LatihanMandiriArrayList.java
-
-└── bagian3/
-    └── perpustakaan/
-        ├── Buku.java
-        ├── Perpustakaan.java
-        └── MainPerpustakaan.java
+├── bagian1/
+│   └── array/
+│       ├── Latihan1.java
+│       ├── Latihan2.java
+│       └── LatihanMandiri3.java
+│
+├── bagian2/
+│   └── arraylist/
+│       ├── Latihan3.java
+│       ├── Latihan4.java
+│       ├── Latihan5.java
+│       └── LatihanMandiriArrayList.java
+│
+├── bagian3/
+│   └── perpustakaan/
+│       ├── Buku.java
+│       ├── Perpustakaan.java
+│       └── MainPerpustakaan.java
+│
+└── tugas/
+    ├── Mahasiswa.java
+    ├── KelasKuliah.java
+    └── MainTugas.java
 ```
 
 ---
@@ -148,6 +154,7 @@ Menyimpan informasi:
 
 Fitur:
 
+* Constructor
 * Getter
 * Setter
 * Method `info()`
@@ -175,9 +182,98 @@ Digunakan untuk:
 
 * Membuat objek perpustakaan
 * Menambahkan buku
-* Menguji peminjaman
-* Menguji pengembalian
-* Menguji pencarian penulis
+* Menguji peminjaman buku
+* Menguji pengembalian buku
+* Menguji pencarian berdasarkan penulis
+* Menampilkan jumlah buku yang tersedia
+
+---
+
+# Tugas Akhir - Pengelolaan Nilai Mahasiswa
+
+Pada bagian ini dibuat sistem sederhana untuk mengelola data mahasiswa dan nilai mata kuliah menggunakan konsep Multi-Class dan Object-Oriented Programming (OOP).
+
+## Class Mahasiswa
+
+Menyimpan informasi mahasiswa berupa:
+
+* Nama
+* NPM
+* Nilai
+
+Fitur:
+
+* Constructor
+* Getter
+* Method `lulus()`
+* Method `info()`
+
+Method `lulus()` digunakan untuk menentukan status kelulusan mahasiswa berdasarkan nilai:
+
+```java
+nilai >= 60
+```
+
+## Class KelasKuliah
+
+Mengelola kumpulan objek mahasiswa menggunakan:
+
+```java
+ArrayList<Mahasiswa>
+```
+
+Fitur:
+
+* Menambah mahasiswa
+* Menampilkan seluruh data mahasiswa
+* Menghitung rata-rata nilai
+* Menghitung jumlah mahasiswa yang lulus
+* Menghitung jumlah mahasiswa
+
+Method utama:
+
+* `tambahMahasiswa()`
+* `tampilkanSemua()`
+* `hitungRataRata()`
+* `jumlahLulus()`
+* `jumlahMahasiswa()`
+
+## Class MainTugas
+
+Digunakan untuk:
+
+* Membuat objek KelasKuliah
+* Menampilkan daftar mata kuliah menggunakan array
+* Menambahkan data mahasiswa ke dalam koleksi
+* Menampilkan seluruh data mahasiswa
+* Menampilkan rata-rata nilai kelas
+* Menampilkan jumlah mahasiswa yang lulus
+* Menambahkan mahasiswa baru ke dalam koleksi
+* Menampilkan jumlah data terbaru setelah penambahan
+
+### Implementasi Array
+
+Daftar mata kuliah disimpan menggunakan array dengan ukuran tetap.
+
+Contoh:
+
+```java
+String[] mataKuliah = {
+    "Pemrograman Berorientasi Objek",
+    "Struktur Data",
+    "Basis Data"
+};
+```
+
+### Implementasi ArrayList
+
+Data mahasiswa disimpan menggunakan:
+
+```java
+ArrayList<Mahasiswa>
+```
+
+Sehingga jumlah mahasiswa dapat bertambah secara dinamis selama program berjalan.
 
 ---
 
@@ -187,10 +283,12 @@ Digunakan untuk:
 * Constructor
 * Encapsulation
 * Getter dan Setter
+* Method
 * ArrayList of Objects
-* Method pada Object
-* Interaksi antar Class
 * Object Composition
+* Aggregation
+* Interaksi antar Class
+* Multi-Class Programming
 
 ---
 
@@ -198,12 +296,38 @@ Digunakan untuk:
 
 * Java
 * NetBeans IDE
-* JDK 17+ (atau sesuai kebutuhan praktikum)
+* JDK
+
+---
+
+# Cara Menjalankan Program
+
+1. Clone repository:
+
+```bash
+git clone [https://github.com/fahri238/ArrayArrayList.git]
+```
+
+2. Buka project menggunakan NetBeans IDE atau IDE Java lainnya.
+
+3. Jalankan class yang ingin diuji, misalnya:
+
+```text
+MainPerpustakaan.java
+```
+
+atau
+
+```text
+MainTugas.java
+```
+
+4. Hasil program akan ditampilkan pada console/output IDE.
 
 ---
 
 # Author
 
-Muhammad Fahri Ilmi
+**Muhammad Fahri Ilmi**
 
-Program Studi Ilmu Komputer
+Program Studi Teknik Informatika

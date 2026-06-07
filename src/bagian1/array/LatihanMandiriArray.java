@@ -1,8 +1,9 @@
 
 package bagian1.array;
 
-public class Latihan3Mandiri {
-     public static void main(String[] args) {
+
+public class LatihanMandiriArray {
+    public static void main(String[] args) {
 
         // 1. Array suhu harian
         double[] suhu = {30.5, 28.7, 31.2, 29.8, 32.1, 27.9};
